@@ -1,0 +1,24 @@
+//
+//mixinとは、別の場所でそのスタイルを使いまわせる機能で引数(パラメータ)とか使える。
+//１種の関数みたいなもの
+
+
+/* breakpoint */
+@mixin media($breakpoint) {
+  @media #{map-get($breakpoints,$breakpoint)} { //map-get($map , $key) 指定したキーに対する値を取得するよ。存在しない場合はnullを返す
+    @content; //@include で呼び出せるよ
+  }
+}
+
+/**
+例えばこの場合だと中身がこんな感じ
+map-get(sp, screen and (max-width: 767px));
+
+
+
+@include media(sp) {
+  .block {
+    display: none;
+  }
+}
+**/

@@ -1,0 +1,65 @@
+@charset "utf-8";
+@import "import.scss";
+
+/***********************************
+Syntactically Awesome StyleSheetの略
+Syntactically ＝ 文法的に
+Awesome ＝ すごい
+StyleSheet = スタイルシート
+***********************************/
+
+/****************************************
+>> ejsでテンプレート化して組み立てるとより効率的
+*****************************************/
+
+/*****************************************************************
+>> 参考URL https://webdesignday.jp/inspiration/technique/css/5819/
+*****************************************************************/
+
+.block {
+  background-color: $main-bg-color;
+  padding: 30px;
+
+  &-element {
+    background-color: $content-bg-color;
+    padding: 30px;
+
+    &__modifier {
+      background-color: $inner-bg-color;
+      padding: 30px;
+    }
+  }
+}
+
+@include media(sp) {
+  .block {
+    display: none;
+  }
+}
+
+
+
+/*
+
+普通のCSSだと
+
+.block {
+  xxx: xxx;
+}
+
+.block-element {
+  xxx: xxx;
+}
+
+.block-element__modifier {
+  xxx: xxx;
+}
+
+@media and screen(max-width: 768) {
+.block {
+    display: none;
+  }
+}
+
+
+*/

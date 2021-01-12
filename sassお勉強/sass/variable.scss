@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+/*********************
+>> main color
+**********************/
+$main-bg-color: #1b5cd6;
+$content-bg-color: #d33062;
+$inner-bg-color: #e5f060;
+$fucking-guys: #ccc;
+/*********************
+>> breakpoints
+**********************/
+$breakpoints:(
+  sp: "screen and (max-width: 767px)",
+  pc: "screen and (min-width: 768px)",
+);
